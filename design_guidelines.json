@@ -1,0 +1,107 @@
+{
+  "theme": "light",
+  "design_direction": "Editorial AI: Combining the high-end, heavy typography and stark minimalism of editorial fashion magazines with the ultra-clean, functional precision of Swiss-style tech interfaces. E-commerce products take center stage with massive breathing room, while AI features (Semantic Search, AI Assistant) stand out through high-contrast markers and Monospace typograpy.",
+  "typography": {
+    "primary_heading_font": "Playfair Display",
+    "body_font": "Manrope",
+    "mono_accent_font": "JetBrains Mono",
+    "heading_strategy": "Massive, expressive, tightly tracked. Avoid generic center-aligned blocks. Use font-light for elegance or font-black for impact. Do not use default bold.",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter leading-none font-light",
+      "h2": "text-3xl sm:text-4xl tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base leading-relaxed",
+      "labels_mono": "font-mono text-xs uppercase tracking-[0.2em]"
+    }
+  },
+  "colors": {
+    "background_primary": "#FFFFFF",
+    "background_secondary": "#F5F5F5",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#4A4A4A",
+    "accent_ai": "#002FA7",
+    "accent_ai_hover": "#002280",
+    "border_subtle": "#E5E5E5",
+    "surface_glass": "bg-white/70 backdrop-blur-xl backdrop-saturate-150 border border-white/40",
+    "strategy": "95% of the UI should be monochrome to let product images breathe. Color exists ONLY to guide action, particularly for AI features (Semantic Search, AI Chatbot). Use International Klein Blue (#002FA7) as the kinetic trigger for AI-assisted flows."
+  },
+  "visual_enhancers": {
+    "surfaces": "Use Glassmorphism (The Crystal Variant) for the sticky navigation and floating AI Shopping Assistant widget. Use Flat Solid backgrounds with sharp 1px borders for Admin Dashboards.",
+    "shadows": "Ambient diffuse shadows for floating elements: shadow-[0_8px_32px_rgba(0,0,0,0.08)]. No soft shadows for standard layout blocks.",
+    "borders": "Expose the grid in the Admin section using border-collapse styles. 1px solid borders.",
+    "animation": "Smooth interactions. Micro-transitions on hover. Avoid 'transition: all'. Explicitly transition transform and opacity.",
+    "textures": "Subtle noise overlay (opacity 2-3%) on hero sections to break digital flatness."
+  },
+  "components": {
+    "button_primary": "Pill-shaped or sharp rectangular, bg-[#002FA7] text-white hover:bg-[#002280]. Labels must be uppercase and tracking-wide.",
+    "ai_chat_widget": "Floating bottom-right. Glassmorphic panel, sharp typography, stark borders.",
+    "product_card": "Cardless. Just the image, tight text below. No borders or shadows around the product card. Let the image be the shape.",
+    "admin_dashboard": "High-density grid. No rounded corners. Functional, monochrome, high-contrast. Use Shadcn components heavily here.",
+    "search_bar": "Massive, spanning multiple columns. 'Ask the AI to find...' placeholder. Focus state increases border width and drops a sharp shadow.",
+    "shadcn_customizations": "Override default rounded corners to rounded-none or rounded-sm. Remove excessive default card shadows. Use Sonner for toasts."
+  },
+  "layouts": {
+    "spacing": "Generous spacing philosophy: p-8 to p-16 for marketing sections. The AI often uses p-4; override this and multiply by 2.",
+    "home_page": "Mode A: The Tetris Grid. Asymmetric, wide gaps (gap-8 or gap-12). Leave negative space intentionally.",
+    "product_listing": "2 to 3 column asymmetrical grid. Mix tall images (row-span-2) with square images.",
+    "product_detail_page": "Split layout: Sticky product details on the right (w-1/3 or w-1/4), massive edge-to-edge scrollable images on the left.",
+    "admin": "Mode B: High Density Grid. Tight gaps (gap-4). Every pixel utilized."
+  },
+  "motion": {
+    "hover": "-translate-y-1 transition-transform duration-300 ease-out",
+    "entrance": "Staggered fade-up for product grids and AI chat messages.",
+    "accessibility": "Respect prefers-reduced-motion."
+  },
+  "accessibility": {
+    "contrast": "Ensure APCA contrast ratio compliance. Text over images MUST have subtle text-shadow or a gradient overlay.",
+    "focus": "focus:ring-2 focus:ring-[#002FA7] focus:outline-none focus-visible:ring-offset-2",
+    "test_ids": "All interactive elements MUST include data-testid attribute (e.g., data-testid='add-to-cart-button')."
+  },
+  "media": {
+    "image_strategy": "Products are hero. Images should be huge and unconstrained by standard card containers. Hero image max-h-[80vh] on mobile.",
+    "image_urls": {
+      "hero_model": {
+        "url": "https://images.unsplash.com/photo-1715541448446-3369e1cc0ee9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwbW9kZWwlMjBzdHVkaW98ZW58MHx8fHwxNzg0MDA5Mzc1fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Edgy editorial fashion model in black, use for main hero banner.",
+        "category": "hero"
+      },
+      "product_1": {
+        "url": "https://images.unsplash.com/photo-1515940175183-6798529cb860?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwzfHxzbGVlayUyMHRlY2glMjBnYWRnZXR8ZW58MHx8fHwxNzg0MDA5Mzc1fDA&ixlib=rb-4.1.0&q=85",
+        "description": "White Sony headphones.",
+        "category": "product"
+      },
+      "product_2": {
+        "url": "https://images.unsplash.com/photo-1581539250439-c96689b516dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBpbnRlcmlvciUyMGNoYWlyfGVufDB8fHx8MTc4NDAwOTM3NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Modern black interior chair on white.",
+        "category": "product"
+      },
+      "product_3": {
+        "url": "https://images.unsplash.com/photo-1772191530787-b9546da02fbc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwYWVzdGhldGljJTIwcHJvZHVjdHxlbnwwfHx8fDE3ODQwMDkzNzV8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Minimalist cream jar aesthetic.",
+        "category": "product"
+      },
+      "product_4": {
+        "url": "https://images.unsplash.com/photo-1504610926078-a1611febcad3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwyfHxzbGVlayUyMHRlY2glMjBnYWRnZXR8ZW58MHx8fHwxNzg0MDA5Mzc1fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Jet black iPhone and watch.",
+        "category": "product"
+      }
+    }
+  },
+  "GENERAL_UI_UX_DESIGN_GUIDELINES": [
+    "Design applies to .js React component files (not .tsx). Avoid any TypeScript specific type definitions.",
+    "Navigation MUST be visible on desktop. Never use a fully transparent header over hero images - apply glassmorphism or semi-solid background.",
+    "Form components, date pickers, dropdown menus MUST utilize customized Shadcn primitives rather than native HTML inputs.",
+    "Add 'data-testid' to ALL interactive elements (buttons, links, form inputs) and key informational displays.",
+    "Use Phosphor icons via '@phosphor-icons/react'.",
+    "Never use generic AI emojis."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "DO NOT apply universal transition (e.g., transition: all). Add specific transitions.",
+    "DO NOT center align the app container. No '.App { text-align: center; }'.",
+    "Every interaction needs micro-animations (hover states, focus).",
+    "Use 2-3x more spacing than feels comfortable. Apply generous padding to containers.",
+    "Always explicitly set text color on hover.",
+    "Use 'sonner' for toast notifications."
+  ],
+  "instructions_to_main_agent": "Implement an editorial-inspired e-commerce platform with prominent AI features using React (.js files). The visual language must be stark, monochrome (blending Serif and Monospace typography), with International Klein Blue (#002FA7) reserved strictly for primary CTA and AI integrations (chat, semantic search). Structure the project using React + Tailwind + Shadcn. Ensure all forms and admin tables use customized Shadcn primitives with border-radius removed or reduced. Implement data-testid on interactive elements."
+}
